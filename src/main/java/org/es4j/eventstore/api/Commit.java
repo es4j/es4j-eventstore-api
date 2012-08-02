@@ -6,9 +6,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import org.es4j.messaging.api.EventMessage;
 import org.es4j.util.DateTime;
-import org.es4j.util.Guid;
+//import org.es4j.util.Guid;
 
 
 // Represents a series of events which have been fully committed as a single unit and which apply to the stream indicated.
@@ -26,9 +27,9 @@ public final class Commit implements Serializable /*, Cloneable*/ {
     // <param name="headers">The metadata which provides additional, unstructured information about this commit.</param>
     // <param name="events">The collection of event messages to be committed as a single unit.</param>
     public Commit(
-            Guid                streamId,
+            UUID                streamId,
             int                 streamRevision,
-            Guid                commitId,
+            UUID                commitId,
             int                 commitSequence,
             DateTime            commitStamp,
             Map<String, Object> headers,
@@ -58,7 +59,7 @@ public final class Commit implements Serializable /*, Cloneable*/ {
     /// Gets the value which uniquely identifies the stream to which the commit belongs.
     /// </summary>
     //[DataMember] // virtual
-    private final Guid streamId; // { get; private set; }
+    private final UUID streamId; // { get; private set; }
 
     /// <summary>
     /// Gets the value which indicates the revision of the most recent event in the stream to which this commit applies.
@@ -70,7 +71,7 @@ public final class Commit implements Serializable /*, Cloneable*/ {
     /// Gets the value which uniquely identifies the commit within the stream.
     /// </summary>
     //[DataMember] // virtual
-    private final Guid commitId; // { get; private set; }
+    private final UUID commitId; // { get; private set; }
 
     /// <summary>
     /// Gets the value which indicates the sequence (or position) in the stream to which this commit applies.
@@ -143,7 +144,7 @@ public final class Commit implements Serializable /*, Cloneable*/ {
     }
     */
 
-    public final Guid getCommitId() {
+    public final UUID getCommitId() {
         return commitId;
     }
 
@@ -163,7 +164,7 @@ public final class Commit implements Serializable /*, Cloneable*/ {
         return headers; // Collections.unmodifiableMap(headers);
     }
 
-    public final Guid getStreamId() {
+    public final UUID getStreamId() {
         return streamId;
     }
 
