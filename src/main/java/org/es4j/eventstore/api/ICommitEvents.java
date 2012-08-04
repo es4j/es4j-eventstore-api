@@ -21,7 +21,7 @@ public interface ICommitEvents {
     /// <returns>A series of committed events from the stream specified sorted in ascending order..</returns>
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    Iterable<Commit> getFrom(UUID streamId, int minRevision, int maxRevision);
+    Iterable<Commit> getFrom(final UUID streamId, final int minRevision, final int maxRevision);
 
     /// <summary>
     /// Writes the to-be-commited events provided to the underlying persistence mechanism.
@@ -30,5 +30,5 @@ public interface ICommitEvents {
     /// <exception cref="ConcurrencyException" />
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    void commit(Commit attempt);
+    void commit(final Commit attempt);
 }

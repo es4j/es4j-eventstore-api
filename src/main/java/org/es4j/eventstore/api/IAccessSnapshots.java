@@ -23,7 +23,7 @@ public interface IAccessSnapshots {
     /// <returns>If found, it returns the snapshot; otherwise null is returned.</returns>
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    Snapshot getSnapshot(UUID streamId, int maxRevision);
+    Snapshot getSnapshot(final UUID streamId, final int maxRevision);
 
     /// <summary>
     /// Adds the snapshot provided to the stream indicated.
@@ -32,7 +32,7 @@ public interface IAccessSnapshots {
     /// <returns>If the snapshot was added, returns true; otherwise false.</returns>
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    boolean addSnapshot(Snapshot snapshot);
+    boolean addSnapshot(final Snapshot snapshot);
 
     /// <summary>
     /// Gets identifiers for all streams whose head and last snapshot revisions differ by at least the threshold specified.
@@ -41,5 +41,5 @@ public interface IAccessSnapshots {
     /// <returns>The streams for which the head and snapshot revisions differ by at least the threshold specified.</returns>
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    Iterable<StreamHead> getStreamsToSnapshot(int maxThreshold);
+    Iterable<StreamHead> getStreamsToSnapshot(final int maxThreshold);
 }

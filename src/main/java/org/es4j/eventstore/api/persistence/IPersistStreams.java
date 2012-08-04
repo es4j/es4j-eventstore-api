@@ -29,7 +29,7 @@ public interface IPersistStreams extends IDisposable, ICommitEvents, IAccessSnap
     /// <returns>All commits that have occurred on or after the specified starting time.</returns>
     /// <exception cref="StorageException" />
     /// <exception cref="StorageUnavailableException" />
-    Iterable<Commit> getFrom(DateTime start);
+    Iterable<Commit> getFrom(final DateTime start);
 
     /// <summary>
     /// Gets a set of commits that has not yet been dispatched.
