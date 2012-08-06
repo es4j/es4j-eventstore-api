@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.UUID;
 import org.es4j.messaging.api.EventMessage;
 import org.es4j.util.DateTime;
-//import org.es4j.util.Guid;
 
 
 // Represents a series of events which have been fully committed as a single unit and which apply to the stream indicated.
