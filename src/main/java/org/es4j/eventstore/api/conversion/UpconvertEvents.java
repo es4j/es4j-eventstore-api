@@ -5,8 +5,8 @@ package org.es4j.eventstore.api.conversion;
 /// </summary>
 /// <typeparam name="TSource">The source event type from which to convert.</typeparam>
 /// <typeparam name="TTarget">The target event type.</typeparam>
-public interface IUpconvertEvents<TSource, TTarget> //where TSource : class
-                                                    //where TTarget : class
+public abstract class UpconvertEvents<TSource, TTarget> //where TSource : class
+                                                          //where TTarget : class
 {
     /// <summary>
     /// Converts an event from one type to another.
@@ -14,5 +14,5 @@ public interface IUpconvertEvents<TSource, TTarget> //where TSource : class
     /// <param name="sourceEvent">The event to be converted.</param>
     /// <returns>The converted event.</returns>
 
-    TTarget convert(TSource sourceEvent);
+    public abstract TTarget convert(TSource sourceEvent);
 }
