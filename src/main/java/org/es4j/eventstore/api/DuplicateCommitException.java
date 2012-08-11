@@ -2,13 +2,14 @@ package org.es4j.eventstore.api;
 
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 
 /// <summary>
 /// Represents an attempt to commit the same information more than once.
 /// </summary>
 //[Serializable]
+@SuppressWarnings("serial")
 public class DuplicateCommitException extends EventStoreRuntimeException {
 
     /// <summary>

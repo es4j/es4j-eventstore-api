@@ -1,9 +1,10 @@
 package org.es4j.eventstore.api;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 
+@SuppressWarnings("serial")
 public class EventStoreRuntimeException extends RuntimeException {
 
     public EventStoreRuntimeException() {

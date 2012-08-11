@@ -1,13 +1,14 @@
 package org.es4j.eventstore.api;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 
 /// <summary>
 /// Represents an attempt to retrieve a nonexistent event stream.
 /// </summary>
 //[Serializable]
+@SuppressWarnings("serial")
 public class StreamNotFoundException extends EventStoreRuntimeException {
 
     /// <summary>

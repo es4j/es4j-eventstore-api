@@ -1,13 +1,14 @@
 package org.es4j.eventstore.api.persistence;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 
 /// <summary>
 /// Represents a general failure of the storage engine or persistence infrastructure.
 /// </summary>
 //[Serializable]
+@SuppressWarnings("serial")
 public class StorageException extends RuntimeException {
 
     /// <summary>

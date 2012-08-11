@@ -1,13 +1,14 @@
 package org.es4j.eventstore.api.conversion;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 import org.es4j.eventstore.api.EventStoreRuntimeException;
 
 /// <summary>
 /// Represents the failure that occurs when there are two or more event converters created for the same source type.
 /// </summary>
 // [Serializable]
+@SuppressWarnings("serial")
 public class MultipleConvertersFoundException extends EventStoreRuntimeException {
     /// <summary>
     /// Initializes a new instance of the MultipleConvertersFoundException class.

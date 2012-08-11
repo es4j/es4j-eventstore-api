@@ -1,12 +1,13 @@
 package org.es4j.eventstore.api;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 /// <summary>
 /// Represents an optimistic concurrency conflict between multiple writers.
 /// </summary>
 //[Serializable]
+@SuppressWarnings("serial")
 public class ConcurrencyException extends EventStoreRuntimeException {
     /// <summary>
     /// Initializes a new instance of the ConcurrencyException class.

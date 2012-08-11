@@ -1,13 +1,14 @@
 package org.es4j.eventstore.api.persistence;
 
 import org.es4j.dotnet.SerializationInfo;
-import org.es4j.dotnet.StreamingContext;
+import org.es4j.dotnet.streams.StreamingContext;
 
 
 /// <summary>
 /// Indicates that the underlying persistence medium is unavailable or offline.
 /// </summary>
 //[Serializable]
+@SuppressWarnings("serial")
 public class StorageUnavailableException extends StorageException {
 
     /// <summary>
